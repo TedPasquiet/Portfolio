@@ -1,0 +1,29 @@
+header{
+    display: flex;
+    min-height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: white;
+}
+.styleDeCafe{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2.5%;
+    width: 20%;
+    :first-child:hover{
+        color: red;
+    }
+    :nth-child(2):hover{
+        color: cadetblue;
+    }
+}
+.titre{
+    font-size: 24px;
+}
+.nav{
+    margin-left: 2.5%;
+    :hover{
+        transform: rotateX(90deg)
+    }
+}
