@@ -18,7 +18,7 @@ return(
     {posts
     .map((post) => {
        return (
-          <a className="post-card" key={post.id}>
+          <div className="post-card" key={post.id}>
             <div className='cafeTitle'>
                <h2 className="post-title">{post.title}</h2>
              </div>
@@ -37,7 +37,7 @@ return(
                      </ul>
                   )})}
                </div>
-          </a>
+          </div>
        );
     })}
  </div>

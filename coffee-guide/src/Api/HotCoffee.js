@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export default function Coffee() {
+export default function HotCoffee() {
     const [posts, setPosts] = useState([]);
     useEffect(() => {
        fetch('https://api.sampleapis.com/coffee/hot')
@@ -17,10 +17,10 @@ export default function Coffee() {
  return (
     <div className="posts-container">
     {posts
-    .filter(post => post.description != "test" && post.description != "test2" && post.description != "Coffee2002" && post.description != "Coffee2003")
+    .filter(post => post.description !== "test" && post.description !== "test2" && post.description !== "Coffee2002" && post.description !== "Coffee2003")
     .map((post) => {
        return (
-          <a className="post-card" key={post.id}>
+          <div className="post-card" key={post.id}>
             <div className='cafeTitle'>
                <h2 className="post-title">{post.title}</h2>
              </div>
@@ -39,7 +39,7 @@ export default function Coffee() {
                      </ul>
                   )})}
                </div>
-          </a>
+          </div>
        );
     })}
  </div>

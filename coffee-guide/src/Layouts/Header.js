@@ -1,5 +1,5 @@
 import React from 'react'
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -8,11 +8,21 @@ export default function Header() {
             <p>Test</p>
         </navbar>    
         <div className='titre'>
+          <Link to={"/"}>
             <h1> Coffee Guide </h1>
+          </Link>
         </div>
         <div className='styleDeCafe'>
-            <p> Hot </p>
-            <p> Cold </p>
+        <div> 
+          <Link to="/HotCoffee">
+            Hot
+          </Link>
+          </div>
+          <div>
+          <Link to="/ColdCoffee">
+             ColdCoffee
+          </Link>
+          </div>
         </div>
     </header>
   )
